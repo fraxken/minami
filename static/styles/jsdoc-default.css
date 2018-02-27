@@ -4,6 +4,24 @@
   box-sizing: border-box
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #455A64;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -71,9 +89,12 @@ h3 {
 h4 {
   font-size: 18px;
   margin: 1em 0 .2em;
-  color: #4d4e53;
+  color: #FFF;
   /* border-bottom: 1px solid #eee; */
   padding-bottom: 8px;
+  background: #01579B;
+  border-radius: 3px;
+  padding: 5px 10px;
 }
 
 h5, .container-overview .subsection-title {
@@ -140,7 +161,7 @@ section {
 
 .signature-attributes {
   font-size: 60%;
-  color: #aaa;
+  color: #FFEB3B;
   font-style: italic;
   font-weight: lighter;
 }
@@ -317,7 +338,10 @@ footer {
 }
 
 .type-signature {
-  color: #aaa
+  color: #FFEB3B
+}
+.type-signature a {
+  color: #E3F2FD;
 }
 
 .name, .signature {
@@ -326,7 +350,7 @@ footer {
 
 .details {
   margin-top: 14px;
-  border-left: 2px solid #DDD;
+  border-left: 3px solid #E0E0E0;
   line-height: 30px;
 }
 
@@ -372,8 +396,8 @@ footer {
 }
 
 .prettyprint {
-  font-size: 13px;
-  border: 1px solid #ddd;
+  font-size: 14px;
+  border: 1px solid #CCC;
   border-radius: 3px;
   box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.05);
   overflow: auto;
@@ -384,10 +408,10 @@ footer {
 }
 
 .prettyprint code {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 18px;
   display: block;
-  background-color: #fff;
+  background-color: #FAFAFA;
   color: #4D4E53;
 }
 
@@ -438,25 +462,50 @@ footer {
    user-select: text;
 }
 
+.param-type code {
+  padding: 4px;
+}
+
 .params, .props {
   border-spacing: 0;
-  border: 1px solid #ddd;
+  border: 1px solid #263238;
   border-collapse: collapse;
-  border-radius: 3px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   width: 100%;
-  font-size: 14px;
+  font-size: 15px;
+  background: #37474F;
   /* margin-left: 15px; */
 }
 
+.params .name code, .params .param-type code {
+  background: #2979FF;
+  padding: 4px 10px;
+  color: #FFF;
+  border: 1px solid #263238;
+}
+.params .name code a, .params .param-type code a {
+  color: #FFF;
+}
+
+.props .name code, .props .param-type code {
+  background: #2979FF;
+  padding: 4px 10px;
+  color: #FFF;
+  border: 1px solid #263238;
+}
+.props .name code a, .props .param-type code a {
+  color: #FFF;
+}
+
 .params .name, .props .name, .name code {
-   color: #4D4E53;
+   color: #333;
    font-family: Consolas, Monaco, 'Andale Mono', monospace;
    font-size: 100%;
 }
 
 .params td, .params th, .props td, .props th {
    margin: 0px;
+   color: #FFF;
    text-align: left;
    vertical-align: top;
    padding: 10px;
@@ -464,17 +513,21 @@ footer {
 }
 
 .params td {
-   border-top: 1px solid #eee
+   border-top: 2px solid #263238
 }
 
 .params thead tr, .props thead tr {
-   background-color: #fff;
-   font-weight: bold;
+  color: #FFEB3B;
+  background: #263238;
+  height: 30px;
+  font-weight: bold;
 }
 
 .params .params thead tr, .props .props thead tr {
-   background-color: #fff;
-   font-weight: bold;
+  color: #FFEB3B;
+  background: #263238;
+  height: 30px;
+  font-weight: bold;
 }
 
 .params td.description > p:first-child, .props td.description > p:first-child {
@@ -501,7 +554,8 @@ dl.param-type {
 .param-type dd {
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
   display: inline-block;
-  padding: 0;
+  padding: 2px;
+  margin-left: 10px;
   margin: 0;
   font-size: 14px;
 }
@@ -632,7 +686,7 @@ dl.param-type {
 .section-method {
   margin-bottom: 30px;
   padding-bottom: 30px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #CCC;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 680px) {
