@@ -5,21 +5,15 @@
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
  
 ::-webkit-scrollbar-thumb {
-  background: #455A64;
-  border-radius: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  background: #BDBDBD;
 }
 
 ::-webkit-scrollbar-track {
-  background: #ddd;
-  border-radius: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  background: #EEEEEE;
 }
 
 html, body {
@@ -94,7 +88,10 @@ h4 {
   padding-bottom: 8px;
   background: #01579B;
   border-radius: 3px;
-  padding: 5px 10px;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  padding: 8px 10px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0,0,0,0.2);
 }
 
 h5, .container-overview .subsection-title {
@@ -163,7 +160,8 @@ section {
   font-size: 60%;
   color: #FFEB3B;
   font-style: italic;
-  font-weight: lighter;
+  font-weight: bold;
+  margin-left: 2px;
 }
 
 /** Readme  **/
@@ -289,8 +287,8 @@ nav li {
 }
 
 .type-class {
-  background: #D1C4E9;
-  color: #4527A0;
+  background: #651FFF;
+  color: #FFF;
 }
 
 .type-member {
@@ -468,33 +466,33 @@ footer {
 
 .params, .props {
   border-spacing: 0;
-  border: 1px solid #263238;
+  border: 1px solid #CCC;
   border-collapse: collapse;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   width: 100%;
   font-size: 15px;
-  background: #37474F;
+  background: #F5F5F5;
   /* margin-left: 15px; */
 }
 
 .params .name code, .params .param-type code {
-  background: #2979FF;
+  background: #EEE;
   padding: 4px 10px;
-  color: #FFF;
-  border: 1px solid #263238;
+  color: #333;
+  border: 1px solid #CCC;
 }
 .params .name code a, .params .param-type code a {
-  color: #FFF;
+  color: #333;
 }
 
 .props .name code, .props .param-type code {
-  background: #2979FF;
-  padding: 4px 10px;
-  color: #FFF;
-  border: 1px solid #263238;
+  background: #EEE;
+  padding: 4px 8px;
+  color: #333;
+  border: 1px solid #CCC;
 }
 .props .name code a, .props .param-type code a {
-  color: #FFF;
+  color: #06F;
 }
 
 .params .name, .props .name, .name code {
@@ -505,7 +503,7 @@ footer {
 
 .params td, .params th, .props td, .props th {
    margin: 0px;
-   color: #FFF;
+   color: #333;
    text-align: left;
    vertical-align: top;
    padding: 10px;
@@ -513,19 +511,17 @@ footer {
 }
 
 .params td {
-   border-top: 2px solid #263238
+   border-top: 1px solid #CCC
 }
 
 .params thead tr, .props thead tr {
-  color: #FFEB3B;
-  background: #263238;
+  background: #EEEEEE;
   height: 30px;
   font-weight: bold;
 }
 
 .params .params thead tr, .props .props thead tr {
-  color: #FFEB3B;
-  background: #263238;
+  background: #EEEEEE;
   height: 30px;
   font-weight: bold;
 }
